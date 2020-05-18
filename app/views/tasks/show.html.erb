@@ -1,3 +1,4 @@
+
 <h1><%= @task.title %></h1>
 
 <!-- Line 4 is form Le Wagon Solution -->
@@ -8,9 +9,17 @@
 <% else %>
   <i class="far fa-square"></i> This task is <strong>not</strong> completed yet
 <% end %>
+
 <hr>
 
-<!-- Line 15 Icon Reference from Le Wagon Solution / Continuity with teaching -->
+<%= link_to edit_task_path(@task.id)do %>
+  <i class="fas fa-pen"></i></i> Edit this task
+<% end %>
+
+<hr>
+
+<!-- Reference from Le Wagon Solution / Continuity with teaching -->
 <%= link_to tasks_path do %>
   <i class="fa fa-history"></i> Back to list
 <% end %>
+

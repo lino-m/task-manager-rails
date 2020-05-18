@@ -5,11 +5,20 @@ Task.delete_all
 
 puts 'Creating New Seeds ...'
 
-10.times do
-  Task.create(
-    title: Faker::Quote.most_interesting_man_in_the_world,
-    details: Faker::Games::Witcher.quote
-  )
-end
+
+Task.create(
+  title: 'Laundry',
+  details: 'Wash sports and underwear -> 40 Degrees '
+)
+
+Task.create(
+  title: 'Get Groceries',
+  details: 'List is on the kitchen counter - ckeck with roomies'
+)
+
+Task.create(
+  title: 'Learn Tango',
+  details: 'It is random, but man ... you keep not doing it!!!'
+)
 
 puts 'Finished!'
