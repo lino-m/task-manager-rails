@@ -1,2 +1,16 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<h1><%= @task.title %></h1>
+
+<!-- Line 4 is form Le Wagon Solution -->
+<p class="well"><%= @task.details %></p>
+
+<% if @task.completed %>
+  <i class="far fa-check-square"></i> This task is completed
+<% else %>
+  <i class="far fa-square"></i> This task is <strong>not</strong> completed yet
+<% end %>
+<hr>
+
+<!-- Line 15 Icon Reference from Le Wagon Solution / Continuity with teaching -->
+<%= link_to tasks_path do %>
+  <i class="fa fa-history"></i> Back to list
+<% end %>

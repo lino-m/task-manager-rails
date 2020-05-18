@@ -1,5 +1,8 @@
 puts 'Checking Seeds'
 puts 'Cleaning Database'
+
+Task.delete_all
+
 puts 'Creating New Seeds ...'
 
 10.times do
